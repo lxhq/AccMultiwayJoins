@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+          "name": "CUDA C++: Launch",
+          "type": "cuda-gdb",
+          "request": "launch",
+          "program": "${workspaceFolder}/build/exec-LFTJ",
+          "args": [
+              "${workspaceFolder}/dataset/ 1 0 1"
+          ]
+      }
+  ]
+  }
+  

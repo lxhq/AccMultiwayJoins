@@ -62,12 +62,12 @@ if (CUDA_FOUND)
     macro(cuda_add_compile_options options)
         list(APPEND CUDA_NVCC_FLAGS "${options}")
     endmacro()
-    cuda_add_compile_options("-std=c++11 -O3 -g -lineinfo ${ARCH}")
+    cuda_add_compile_options("-std=c++11 -g -lineinfo ${ARCH}")
     cuda_add_compile_options("--expt-extended-lambda -Wno-deprecated-gpu-targets")
     cuda_add_compile_options("-DPROJECT_DIR=\"${CMAKE_SOURCE_DIR}\" -DUSE_LOG -DDATA_ADDR=\"${CMAKE_SOURCE_DIR}/../datasets\"")
     cuda_add_compile_options("-Xcompiler=\"-fopenmp\"")
     cuda_add_compile_options("-Xcompiler=\"-Wno-deprecated\"")
-    cuda_add_compile_options("-DDEVICE_ID=1")           #set device id
+    cuda_add_compile_options("-DDEVICE_ID=0")           #set device id
     cuda_add_compile_options("-DFREE_DATA")           #enabled CUDA_FREE
     cuda_add_compile_options("-DVERBOSE")               #enable verbose mode
 
